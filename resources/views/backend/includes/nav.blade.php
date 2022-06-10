@@ -31,8 +31,6 @@
 
                 <form id="logout" action="{{ url('admin/logout') }}" method="post">
                   @csrf
-
-
                 </form>
               </ul>
             </div><!-- dropdown-menu -->

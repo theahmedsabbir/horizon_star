@@ -32,8 +32,14 @@
     <script src="{{ asset('backend/js/ResizeSensor.js') }}"></script>
     <script src="{{ asset('backend/js/dashboard.js') }}"></script>
     <script src="{{ asset('backend/js/toastr.min.js') }}"></script>
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
 
-
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.summernote').summernote();
+        });
+    </script>
     <script>
       $(function(){
         'use strict'

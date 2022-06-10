@@ -8,7 +8,6 @@ use App\Http\Controllers\Frontend\FrontendController;
 
 //=============== Basic Routes ====================//
 Route::get('cache', function () {
-    \Artisan::call('cache:forget spatie.permission.cache');
     \Artisan::call('view:clear');
     \Artisan::call('cache:clear');
     \Artisan::call('config:clear');
@@ -32,12 +31,20 @@ Route::group(['prefix' => 'admin'], function(){
         Route::get('/dashboard', [AdminController::class, 'dashboard']);
         Route::post('/logout', [AdminController::class, 'logout']);
 
-        //============ Product ================//
-        Route::get('/product/manage', [ProductController::class, 'index']);
-        Route::get('/product/create', [ProductController::class, 'create']);
-        Route::post('/product/store', [ProductController::class, 'store']);
-        Route::get('/product/edit/{product}', [ProductController::class, 'edit']);
-        Route::post('/product/update/{product}', [ProductController::class, 'update']);
-        Route::get('/product/delete/{product}', [ProductController::class, 'destroy']);
+        //============ Service ================//
+        Route::get('/service/manage', 'Backend\ServiceController@index');
+        Route::get('/service/create', 'Backend\ServiceController@create');
+        Route::post('/service/store', 'Backend\ServiceController@store');
+        Route::get('/service/edit/{service}/{slug}', 'Backend\ServiceController@edit');
+        Route::post('/service/update/{service}', 'Backend\ServiceController@update');
+        Route::get('/service/delete/{service}/{slug}', 'Backend\ServiceController@destroy');
+
+        //============ Technology ================//
+        Route::get('/technology/manage', 'Backend\TechnologyController@index');
+        Route::get('/technology/create', 'Backend\TechnologyController@create');
+        Route::post('/technology/store', 'Backend\TechnologyController@store');
+        Route::get('/technology/edit/{technology}/{slug}', 'Backend\TechnologyController@edit');
+        Route::post('/technology/update/{technology}', 'Backend\TechnologyController@update');
+        Route::get('/technology/delete/{technology}/{slug}', 'Backend\TechnologyController@destroy');
     });
 });

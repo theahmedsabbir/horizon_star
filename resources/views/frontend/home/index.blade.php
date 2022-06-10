@@ -258,7 +258,7 @@
     <!--=========== Machine Learning Service Area End ==========-->
 
     <!--====================  Conact us Section Start ====================-->
-    <div class="contact-us-section-wrappaer machine-learning-contact-us-bg section-space--ptb_120">
+    <div class="contact-us-section-wrappaer machine-learning-contact-us-bg section-space--ptb_120" id="about">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-6">
@@ -268,7 +268,7 @@
                     </div>
                     <div class="contact-info-two mt-40 text-left">
                         <div class="contact-us-button mt-20">
-                            <a href="#" class="btn btn--secondary">Contact us</a>
+                            <a href="#contact" class="btn btn--secondary">Contact us</a>
                         </div>
                     </div>
                 </div>
@@ -577,7 +577,7 @@
     <!--=========== Testimonials Area End =============-->
 
     <!--============ Contact Us Area Start =================-->
-    <div class="contact-us-area service-contact-bg section-space--ptb_100">
+    <div class="contact-us-area service-contact-bg section-space--ptb_100" id="contact">
         <div class="container">
             <div class="row align-items-center">
 

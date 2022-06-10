@@ -25,41 +25,20 @@
                                             <li class="has-children has-children--multilevel-submenu">
                                                 <a href="#"><span>Our Service</span></a>
                                                 <ul class="submenu">
-                                                    <li><a href="{{ url('/service/') }}"><span>Computer Vision</span></a></li>
-                                                    <li><a href="{{ url('/service/') }}"><span>Data Science & Business Intelligence</span></a></li>
-                                                    <li><a href="{{ url('/service/') }}"><span>Natural Language Processing</span></a></li>
-                                                    <li><a href="{{ url('/service/') }}"><span>Web App Development</span></a></li>
-                                                    <li><a href="{{ url('/service/') }}"><span>Mobile App Development</span></a></li>
-                                                    <li><a href="{{ url('/service/') }}"><span>Data Analytics & Predictive Analysis</span></a></li>
-                                                    <li><a href="{{ url('/service/') }}"><span>E-Commerce</span></a></li>
-                                                    <li><a href="{{ url('/service/') }}"><span>ERP</span></a></li>
-                                                    <li><a href="{{ url('/service/') }}"><span>IOT</span></a></li>
-                                                    <li><a href="{{ url('/service/') }}"><span>Block Chain & Big Data</span></a></li>
+                                                    @foreach(\App\Models\Service::get() as $service)
+                                                    <li><a href="{{ url('/service/'.$service->id.'/'.$service->slug) }}"><span>{{ $service->name ?? ' ' }}</span></a></li>
+                                                    @endforeach
                                                 </ul>
                                             </li>
                                             <li class="has-children has-children--multilevel-submenu">
                                                 <a href="#"><span>Technologies</span></a>
 
                                                 <ul class="submenu">
-                                                    <li><a href="{{ url('/technologies/') }}"><span>Recommendation System</span></a></li>
-                                                    <li><a href="{{ url('/technologies/') }}"><span>Data Mining</span></a></li>
-                                                    <li><a href="{{ url('/technologies/') }}"><span>Deep Learning</span></a></li>
-                                                    <li><a href="{{ url('/technologies/') }}"><span>Machine Learning</span></a></li>
-                                                    <li><a href="{{ url('/technologies/') }}"><span>Digital Image Processing</span></a></li>
-                                                    <li><a href="{{ url('/technologies/') }}"><span>Data Annotation</span></a></li>
-                                                    <li><a href="{{ url('/technologies/') }}"><span>Data Scraping</span></a></li>
-                                                    <li><a href="{{ url('/technologies/') }}"><span>Data Science</span></a></li>
-                                                    <li><a href="{{ url('/technologies/') }}"><span>Data Cleaning</span></a></li>
-                                                    <li><a href="{{ url('/technologies/') }}"><span>Pattern Matching</span></a></li>
-                                                    <li><a href="{{ url('/technologies/') }}"><span>Predictive Analytics</span></a></li>
-                                                    <li><a href="{{ url('/technologies/') }}"><span>Data Analytics</span></a></li>
-                                                    <li><a href="{{ url('/technologies/') }}"><span>Data Visualization</span></a></li>
-                                                    <li><a href="{{ url('/technologies/') }}"><span>Python Development</span></a></li>
+                                                    @foreach(\App\Models\Technology::all() as $technology)
+                                                    <li><a href="{{ url('/technologies/'.$technology->id . '/' .$technology->slug) }}"><span>{{ $technology->name ?? ' ' }}</span></a></li>
+                                                    @endforeach
                                                 </ul>
                                             </li>
-
-
-
 
                                             <li class="has-children has-children--multilevel-submenu">
                                                 <a href="#"><span>Careers</span></a>
@@ -75,11 +54,11 @@
                                                 <!-- multilevel submenu -->
                                             </li>
                                             <li class="">
-                                                <a href=""><span>About us</span></a>
+                                                <a href="#about"><span>About us</span></a>
                                                 <!-- multilevel submenu -->
                                             </li>
                                             <li class="">
-                                                <a href="{{  url('/contact-us') }}"><span>Contact us</span></a>
+                                                <a href="#contact"><span>Contact us</span></a>
                                                 <!-- multilevel submenu -->
                                             </li>
                                         </ul>

@@ -19,13 +19,8 @@
 
 {{-- toastr --}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-
-
-
-
     {{-- toastr --}}
-    <script type="text/javascript">    
+    <script type="text/javascript">
     @if (Session::has('success'))
         toastr.options = {
           "closeButton": true,
@@ -43,7 +38,7 @@
           "hideEasing": "linear",
           "showMethod": "fadeIn",
           "hideMethod": "fadeOut"
-        }   
+        }
        toastr.info('{{Session::get('success')}}');
     @endif
     @if (Session::has('error'))
@@ -63,7 +58,7 @@
           "hideEasing": "linear",
           "showMethod": "fadeIn",
           "hideMethod": "fadeOut"
-        }   
+        }
        toastr.error('{{Session::get('error')}}');
     @endif
     </script>

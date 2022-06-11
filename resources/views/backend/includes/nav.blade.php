@@ -8,8 +8,6 @@
         <nav class="nav">
           @php
             // $admin = App\Models\User::find(Session::get('admin_id'));
-
-
           @endphp
           <div class="dropdown">
             <a href="" class="nav-link nav-link-profile" data-toggle="dropdown">

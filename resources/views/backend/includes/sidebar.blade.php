@@ -42,6 +42,48 @@
             </ul>
           </li>
 
+          <li class="br-menu-item">
+              <a href="#" class="br-menu-link with-sub {{ Request::is('admin/admin*') ? 'show-sub' : ''}}">
+                  <i class="menu-item-icon icon ion-android-list tx-24"></i>
+                  {{-- <i class="menu-item-icon fa fa-star tx-16"></i> --}}
+                  <span class="menu-item-label">Career</span>
+              </a><!-- br-menu-link -->
+              <ul class="br-menu-sub" style="{{ Request::is('admin/brand*') ? 'display: block;' : 'display: none;'}}">
+
+                  <li class="sub-item">
+                      <a href="{{ url('admin/career/manage') }}" class="sub-link {{ Request::is('admin/career/manage') ? 'active' : ''}}">Manage</a>
+                  </li>
+                  <li class="sub-item">
+                      <a href="{{ url('admin/career/create') }}" class="sub-link {{ Request::is('admin/career/create') ? 'active' : ''}}">Add</a>
+                  </li>
+              </ul>
+          </li>
+          <li class="br-menu-item">
+              <a href="#" class="br-menu-link with-sub {{ Request::is('admin/admin*') ? 'show-sub' : ''}}">
+                  <i class="menu-item-icon icon ion-android-list tx-24"></i>
+                  {{-- <i class="menu-item-icon fa fa-star tx-16"></i> --}}
+                  <span class="menu-item-label">Mission & Vision</span>
+              </a><!-- br-menu-link -->
+              <ul class="br-menu-sub" style="{{ Request::is('admin/brand*') ? 'display: block;' : 'display: none;'}}">
+                  <li class="sub-item">
+                      <a href="{{ url('admin/mission/vision/manage/1') }}" class="sub-link {{ Request::is('admin/mission/vision/manage/1') ? 'active' : ''}}">Manage</a>
+                  </li>
+              </ul>
+          </li>
+
+          <li class="br-menu-item">
+              <a href="#" class="br-menu-link with-sub {{ Request::is('admin/admin*') ? 'show-sub' : ''}}">
+                  <i class="menu-item-icon icon ion-android-list tx-24"></i>
+                  {{-- <i class="menu-item-icon fa fa-star tx-16"></i> --}}
+                  <span class="menu-item-label">About</span>
+              </a><!-- br-menu-link -->
+              <ul class="br-menu-sub" style="{{ Request::is('admin/brand*') ? 'display: block;' : 'display: none;'}}">
+                  <li class="sub-item">
+                      <a href="{{ url('admin/about/manage/1') }}" class="sub-link {{ Request::is('admin/about/manage/1') ? 'active' : ''}}">Manage</a>
+                  </li>
+              </ul>
+          </li>
+
       </ul><!-- br-sideleft-menu -->
       <br>
     </div><!-- br-sideleft -->

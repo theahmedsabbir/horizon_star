@@ -86,16 +86,14 @@
     <!--=========== fun fact Wrapper End ==========-->
 
     <!--=========== About Company Area Start ==========-->
-    <div class="machine-learning-about-company-area machine-learning-about-bg section-space--ptb_120">
+    <div class="machine-learning-about-company-area machine-learning-about-bg section-space--ptb_120" id="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <!-- section-title-wrap Start -->
                     <div class="section-title-wrap text-left section-space--mb_30">
                         <h6 class="section-sub-title mb-20">ABOUT COMPANY</h6>
-                        <h2 class="heading">Everyone in your <span class="text-color-primary">organization</span> <br>
-                        can make an impact with <span class="text-color-primary">AI, Software Development and Machine Learning</span>
-                        </h2>
+                        <h2 class="heading">{{ $data['about']->heading ?? ' ' }}</h2>
                     </div>
                     <!-- section-title-wrap Start -->
                 </div>
@@ -130,13 +128,10 @@
                 <div class="col-lg-5 ms-auto mt-30">
                     <div class="machine-learning-about-content">
                         <div class="section-title mb-20">
-                            <h4>Innovate within your existing workflow</h4>
-                            <p class="dec-text mt-20">Horizon Cloud AI, Software Development and Machine Learning helps solve your most important business problems
-                                end-to-end with prepackaged solutions. Realize the value of your AI, Software Development and Machine Learning
-                                investment sooner, put AI, Software Development and Machine Learning in the hands of those closest to your business,
-                                and reduce friction to adoption across your organization.</p>
+                            <h4>{{ $data['about']->title ?? ' ' }}</h4>
+                            <p class="dec-text mt-20">{!! $data['about']->description ?? ' ' !!}.</p>
                             <div class="button-box mt-30">
-                                <a href="#" class="ht-btn ht-btn-md">Talk to a consultant</a>
+                                <a href="#contact" class="ht-btn ht-btn-md">Talk to a consultant</a>
                             </div>
                         </div>
                     </div>
@@ -258,7 +253,7 @@
     <!--=========== Machine Learning Service Area End ==========-->
 
     <!--====================  Conact us Section Start ====================-->
-    <div class="contact-us-section-wrappaer machine-learning-contact-us-bg section-space--ptb_120" id="about">
+    <div class="contact-us-section-wrappaer machine-learning-contact-us-bg section-space--ptb_120">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-6">
@@ -272,7 +267,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
@@ -635,42 +629,27 @@
                             <p class="text">Reach out to the world’s most reliable IT services.</p>
                         </div>
 
-                        <form class="contact-form" id="contact-form-2" action="" method="post">
+                        <form class="contact-form" id="" action="{{ url('/contact-us') }}" method="post">
+                            @csrf
                             <div class="contact-form__two">
                                 <div class="contact-input">
                                     <div class="contact-inner">
-                                        <input name="con_name" type="text" placeholder="Name *">
+                                        <input name="name" type="text" placeholder="Name *" required>
                                     </div>
                                     <div class="contact-inner">
-                                        <input name="con_email" type="email" placeholder="Email *">
-                                    </div>
-                                </div>
-                                <div class="contact-select">
-                                    <div class="form-item contact-inner">
-                                    <span class="inquiry">
-                                        <select id="Visiting" name="Visiting">
-                                            <option disabled selected>Select Department to email</option>
-                                            <option value="Your inquiry about">Your inquiry about</option>
-                                            <option value="General Information Request">General Information Request</option>
-                                            <option value="Partner Relations">Partner Relations</option>
-                                            <option value="Careers">Careers</option>
-                                            <option value="Software Licencing">Software Licencing</option>
-                                        </select>
-                                    </span>
+                                        <input name="email" type="email" placeholder="Email *" required>
                                     </div>
                                 </div>
                                 <div class="contact-inner contact-message">
-                                    <textarea name="con_message" placeholder="Please describe what you need."></textarea>
+                                    <textarea name="message" placeholder="Please describe what you need." required></textarea>
                                 </div>
                                 <div class="comment-submit-btn">
-                                    <button class="ht-btn ht-btn-md" type="button">Send message</button>
-                                    <p class="form-messege-2"></p>
+                                    <button class="ht-btn ht-btn-md" type="submit">Send message</button>
                                 </div>
                             </div>
                         </form>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>

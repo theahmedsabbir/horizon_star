@@ -44,9 +44,9 @@
                                                 <a href="#"><span>Careers</span></a>
 
                                                 <ul class="submenu">
-                                                    <li><a href="{{ url('/careers/') }}"><span>Job Opening</span></a></li>
-                                                    <li><a href="{{ url('/careers/') }}"><span>Internship</span></a></li>
-                                                    <li><a href="{{ url('/careers/') }}"><span>Life at Horizon Star</span></a></li>
+                                                    @foreach(\App\Models\Career::all() as $career)
+                                                    <li><a href="{{ url('/careers/'.$career->id . '/' . $career->slug) }}"><span>{{ $career->name ?? ' ' }}</span></a></li>
+                                                    @endforeach
                                                 </ul>
                                             </li>
                                             <li class="">
@@ -64,17 +64,6 @@
                                         </ul>
                                     </nav>
                                 </div>
-
-                                <div class="header-search-form-two white-icon">
-                                    <form action="#" class="search-form-top-active">
-                                        <div class="search-icon" id="search-overlay-trigger">
-                                            <a href="javascript:void(0)">
-                                                <i class="far fa-search"></i>
-                                            </a>
-                                        </div>
-                                    </form>
-                                </div>
-
                                 <!-- mobile menu -->
                                 <div class="mobile-navigation-icon white-md-icon d-block d-xl-none" id="mobile-menu-trigger">
                                     <i></i>

@@ -19,6 +19,7 @@ Route::get('cache', function () {
 //=============== Frontend Routes ====================//
 
 Route::get('/', [FrontendController::class, 'index'])->name('root');
+Route::post('/contact-us', [FrontendController::class, 'contactUs']);
 
 Auth::routes();
 
@@ -46,5 +47,21 @@ Route::group(['prefix' => 'admin'], function(){
         Route::get('/technology/edit/{technology}/{slug}', 'Backend\TechnologyController@edit');
         Route::post('/technology/update/{technology}', 'Backend\TechnologyController@update');
         Route::get('/technology/delete/{technology}/{slug}', 'Backend\TechnologyController@destroy');
+
+        //============ Career ================//
+        Route::get('/career/manage', 'Backend\CareerController@index');
+        Route::get('/career/create', 'Backend\CareerController@create');
+        Route::post('/career/store', 'Backend\CareerController@store');
+        Route::get('/career/edit/{career}/{slug}', 'Backend\CareerController@edit');
+        Route::post('/career/update/{career}', 'Backend\CareerController@update');
+        Route::get('/career/delete/{career}/{slug}', 'Backend\CareerController@destroy');
+
+        //============ Mission & Vision ================//
+        Route::get('/mission/vision/manage/{id}', 'Backend\MissionVisionController@index');
+        Route::post('/mission/vision/store', 'Backend\MissionVisionController@store');
+
+        //============ About ================//
+        Route::get('/about/manage/{id}', 'Backend\AboutController@index');
+        Route::post('/about/store', 'Backend\AboutController@store');
     });
 });

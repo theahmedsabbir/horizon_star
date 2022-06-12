@@ -4,7 +4,12 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\About;
+use App\Models\Consult;
 use App\Models\Contact;
+use App\Models\Expert;
+use App\Models\IndustryService;
+use App\Models\Solution;
+use App\Models\Testimonial;
 use Illuminate\Http\Request;
 // use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Session;
@@ -14,7 +19,12 @@ class FrontendController extends Controller
     public function index()
     {
         $data = [
-            'about' => About::first()
+            'about' => About::first(),
+            'consult' => Consult::first(),
+            'solution' => Solution::first(),
+            'industryServices' => IndustryService::orderByDesc('created_at')->get(),
+            'experts' => Expert::orderByDesc('created_at')->get(),
+            'testimonials' => Testimonial::orderByDesc('created_at')->get(),
         ];
         return view('frontend.home.index', compact('data'));
     }

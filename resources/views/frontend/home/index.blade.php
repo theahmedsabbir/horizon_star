@@ -13,10 +13,10 @@
             <div class="row align-items-center">
                 <div class="col-lg-8 col-md-7">
                     <div class="machine-learning-hero-text wow move-up">
-                        <h1 class="font-weight--reguler text-white mb-15" style="font-size: 24px;"><span class="text-color-secondary">Software development and AI</span> <br> Consulting for Trading </h1>
-                        <p>Subliminal AI and Software Development is a Digital solution Consulting firm experienced in applying AI Software Development and Machine Learning to business problems.</p>
+                        <h1 class="font-weight--reguler text-white mb-15" style="font-size: 24px;"><span class="text-color-secondary">{{ $data['consult']->title ?? ' ' }} </span> </h1>
+                        <p>{{ $data['consult']->description ?? ' ' }}</p>
                         <div class="hero-button mt-30">
-                            <a href="#" class="btn btn--secondary">Contact us</a>
+                            <a href="#contact" class="btn btn--secondary">Contact us</a>
                         </div>
                     </div>
                 </div>
@@ -99,13 +99,12 @@
                 </div>
             </div>
             <div class="row">
-
                 <div class="col-lg-6">
                     <div class="image-inner-video-section">
                         <div class="main-video-box video-popup">
                             <a href="" class="video-link  mt-30">
                                 <div class="single-popup-wrap">
-                                    <img class="img-fluid border-radus-5" src="{{ asset('frontend') }}/assets/images/banners/n-popup.webp" alt="">
+                                    <img class="img-fluid border-radus-5" src="{{ asset('/assets/about/'.$data['about']->image) }}" alt="">
                                     <div class="ht-popup-video video-button">
                                         <div class="video-mark">
                                             <div class="wave-pulse wave-pulse-1"></div>
@@ -121,7 +120,7 @@
                             </a>
                         </div>
                         <div class="machine-learning-mark-text mt-30">
-                            Retailer Marks &amp; Spencer created better customer experience with Contact Center AI, Software Development and Machine Learning from Horizon Cloud.
+                            {{ $data['about']->image_content ?? ' ' }}
                         </div>
                     </div>
                 </div>
@@ -158,22 +157,22 @@
                 <div class="col-lg-12">
                     <div class="feature-images__five">
                         <div class="row">
-
+                            @foreach($data['industryServices'] as $industryService)
                             <div class="col-lg-4 col-md-6 wow move-up">
                                 <!-- ht-box-icon Start -->
                                 <div class="ht-box-images style-05">
                                     <div class="image-box-wrap">
                                         <div class="box-image">
                                             <div class="default-image">
-                                                <img class="img-fulid" src="{{ asset('frontend') }}/assets/images/icons/n-icon-1.webp" alt="">
+                                                <img class="img-fulid" src="{{ asset('/assets/industry/'.$industryService->image) }}" alt="" style="height: 100px; width: 100px; border-radius: 50%">
                                             </div>
                                             <div class="hover-images">
-                                                <img class="img-fulid" src="{{ asset('frontend') }}/assets/images/icons/n-icon-1-white.webp" alt="">
+                                                <img class="img-fulid" src="{{ asset('/assets/industry/'.$industryService->image) }}" alt="" style="height: 100px; width: 100px; border-radius: 50%">
                                             </div>
                                         </div>
                                         <div class="content">
-                                            <h5 class="heading">Advanced Development</h5>
-                                            <div class="text">Turn our AI, Software Development and Machine Learning research into your organization’s value with tools like Cloud AutoML, Software Solution, Cloud Natural Language…
+                                            <h5 class="heading">{{ $industryService->title ?? ' ' }}</h5>
+                                            <div class="text">{{ $industryService->description ?? ' ' }}
                                             </div>
                                             <div class="box-images-arrow">
                                                 <a href="#">
@@ -186,63 +185,7 @@
                                 </div>
                                 <!-- ht-box-icon End -->
                             </div>
-                            <div class="col-lg-4 col-md-6 wow move-up">
-                                <!-- ht-box-icon Start -->
-                                <div class="ht-box-images style-05">
-                                    <div class="image-box-wrap">
-                                        <div class="box-image">
-                                            <div class="default-image">
-                                                <img class="img-fulid" src="{{ asset('frontend') }}/assets/images/icons/n-icon-2.webp" alt="">
-                                            </div>
-                                            <div class="hover-images">
-                                                <img class="img-fulid" src="{{ asset('frontend') }}/assets/images/icons/n-icon-2-white.webp" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="content">
-                                            <h5 class="heading">Experts Developer</h5>
-                                            <div class="text">Our industry-specific I, Web Application and Machine Learning solutions meet scalable vertical needs; cross-industry solutions like Contact Center AI, Web Application and Machine Learning…
-                                            </div>
-                                            <div class="box-images-arrow">
-                                                <a href="#">
-                                                    <span class="button-text">Discover now</span>
-                                                    <i class="far fa-long-arrow-right"></i>
-                                                </a>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- ht-box-icon End -->
-                            </div>
-
-                            <div class="col-lg-4 col-md-6 wow move-up">
-                                <!-- ht-box-icon Start -->
-                                <div class="ht-box-images style-05">
-                                    <div class="image-box-wrap">
-                                        <div class="box-image">
-                                            <div class="default-image">
-                                                <img class="img-fulid" src="{{ asset('frontend') }}/assets/images/icons/n-icon-3.webp" alt="">
-                                            </div>
-                                            <div class="hover-images">
-                                                <img class="img-fulid" src="{{ asset('frontend') }}/assets/images/icons/n-icon-3-white.webp" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="content">
-                                            <h5 class="heading">Responsible Developer</h5>
-                                            <div class="text">From Explainable AI, Web Application and Machine Learning to our Inclusive ML Guide, our AI principles and responsible AI practices provide a foundation for…
-                                            </div>
-                                            <div class="box-images-arrow">
-                                                <a href="#">
-                                                    <span class="button-text">Discover now</span>
-                                                    <i class="far fa-long-arrow-right"></i>
-                                                </a>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- ht-box-icon End -->
-                            </div>
+                            @endforeach
                         </div>
                     </div>
 
@@ -259,7 +202,7 @@
                 <div class="col-lg-5 col-md-6">
                     <div class="conact-us-wrap-three">
                         <h6 class="mb-3 section-sub-title">OUR SOLUTION</h6>
-                        <h3 class="heading text-white">Add AI, Web Application and Machine Learning to your existing contact center technology.</h3>
+                        <h3 class="heading text-white">{{ $data['solution']->title ?? ' ' }}.</h3>
                     </div>
                     <div class="contact-info-two mt-40 text-left">
                         <div class="contact-us-button mt-20">
@@ -282,107 +225,29 @@
                         <p class="text mt-30">Horizon specializes in technological and IT-related services such as product engineering, warranty management, building cloud, infrastructure, network, etc. </p>
 
                         <div class="sider-title-button-box mt-30">
-                            <a href="#" class="ht-btn ht-btn-md">Join us now</a>
-                            <a href="#" class="btn-text font-weight--bold small-mt__20">View all team <i class="ml-1 button-icon far fa-long-arrow-right"></i></a>
+                            <a href="#contact" class="ht-btn ht-btn-md">Join us now</a>
+                            <a href="#contact" class="btn-text font-weight--bold small-mt__20">View all team <i class="ml-1 button-icon far fa-long-arrow-right"></i></a>
                         </div>
 
                     </div>
                 </div>
                 <div class="col-lg-8 ht-team-member-style-one">
                     <div class="row">
-                        <div class="col-lg-6 col-md-6 wow move-up">
-                            <div class="grid-item">
-                                <div class="ht-team-member">
-                                    <div class="team-image">
-                                        <img class="img-fluid" src="{{ asset('frontend') }}/assets/images/team/team-member-01-370x250.webp" alt="">
-                                        <div class="social-networks">
-                                            <div class="inner">
-                                                <a target="_blank" href="#" class=" hint--bounce  hint--top hint--theme-two" aria-label="Facebook"><i class="fab fa-facebook"></i>
-                                                </a>
-                                                <a target="_blank" href="#" class=" hint--bounce hint--top hint--theme-two" aria-label="Twitter"><i class="fab fa-twitter"></i>
-                                                </a>
-                                                <a target="_blank" href="#" class=" hint--bounce hint--top hint--theme-two" aria-label="Instagram"><i class="fab fa-instagram"></i>
-                                                </a>
-                                            </div>
+                        @foreach($data['experts'] as $expert)
+                            <div class="col-lg-6 col-md-6 wow move-up">
+                                <div class="grid-item">
+                                    <div class="ht-team-member">
+                                        <div class="team-image">
+                                            <img class="img-fluid" src="{{ asset('/assets/expert/'.$expert->image) }}" alt="">
                                         </div>
-                                    </div>
-                                    <div class="team-info ">
-                                        <h5 class="name">Dollie Horton </h5>
-                                        <div class="position">Marketing</div>
+                                        <div class="team-info ">
+                                            <h5 class="name">{{ $expert->name }} </h5>
+                                            <div class="position">{{ $expert->position }}</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 wow move-up">
-                            <div class="grid-item">
-                                <div class="ht-team-member">
-                                    <div class="team-image">
-                                        <img class="img-fluid" src="{{ asset('frontend') }}/assets/images/team/team-member-07-370x250.webp" alt="">
-                                        <div class="social-networks">
-                                            <div class="inner">
-                                                <a target="_blank" href="#" class=" hint--bounce  hint--top hint--theme-two" aria-label="Facebook"><i class="fab fa-facebook"></i>
-                                                </a>
-                                                <a target="_blank" href="#" class=" hint--bounce hint--top hint--theme-two" aria-label="Twitter"><i class="fab fa-twitter"></i>
-                                                </a>
-                                                <a target="_blank" href="#" class=" hint--bounce hint--top hint--theme-two" aria-label="Instagram"><i class="fab fa-instagram"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="team-info ">
-                                        <h5 class="name">Stephen Mearsley </h5>
-                                        <div class="position">President & CEO</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 wow move-up">
-                            <div class="grid-item">
-                                <div class="ht-team-member">
-                                    <div class="team-image">
-                                        <img class="img-fluid" src="{{ asset('frontend') }}/assets/images/team/team-member-04-370x250.webp" alt="">
-                                        <div class="social-networks">
-                                            <div class="inner">
-                                                <a target="_blank" href="#" class=" hint--bounce  hint--top hint--theme-two" aria-label="Facebook"><i class="fab fa-facebook"></i>
-                                                </a>
-                                                <a target="_blank" href="#" class=" hint--bounce hint--top hint--theme-two" aria-label="Twitter"><i class="fab fa-twitter"></i>
-                                                </a>
-                                                <a target="_blank" href="#" class=" hint--bounce hint--top hint--theme-two" aria-label="Instagram"><i class="fab fa-instagram"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="team-info ">
-                                        <h5 class="name">Maggie Strickland </h5>
-                                        <div class="position">Financial Services</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 wow move-up">
-                            <div class="grid-item">
-                                <div class="ht-team-member">
-                                    <div class="team-image">
-                                        <img class="img-fluid" src="{{ asset('frontend') }}/assets/images/team/team-member-02-370x250.webp" alt="">
-                                        <div class="social-networks">
-                                            <div class="inner">
-                                                <a target="_blank" href="#" class=" hint--bounce  hint--top hint--theme-two" aria-label="Facebook"><i class="fab fa-facebook"></i>
-                                                </a>
-                                                <a target="_blank" href="#" class=" hint--bounce hint--top hint--theme-two" aria-label="Twitter"><i class="fab fa-twitter"></i>
-                                                </a>
-                                                <a target="_blank" href="#" class=" hint--bounce hint--top hint--theme-two" aria-label="Instagram"><i class="fab fa-instagram"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="team-info ">
-                                        <h5 class="name">Monica Blews</h5>
-                                        <div class="position">Project manager</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -522,45 +387,21 @@
                 <div class="col-12">
                     <div class="projects-wrap swiper-container testimonial-slider-machine">
                         <div class="swiper-wrapper">
+                            @foreach($data['testimonials'] as $testimonial)
                             <div class="swiper-slide">
                                 <div class="row align-items-center">
                                     <div class="col-lg-6">
                                         <div class="testimonials-contails-machine tablet-mt__60 small-mt__60">
                                             <h6>TESTIMONIALS</h6>
-                                            <p>Horizon Star Solutions has the best Data Scientist team. They provide the best service, you can rely on them. They always fulfilled our expectations.
-                                            </p>
+                                            <p>{!! $testimonial->description !!}</p>
                                             <div class="testimonial-info">
-                                                <div class="testimonial-name">Communication Manager</div>
-                                                <div class="testimonial-by-line">Logistic Business Provider</div>
+                                                <div class="testimonial-name">{{ $testimonial->position }}</div>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="testimonials-image text-center mt-20">
-                                            <img src="{{ asset('frontend') }}/assets/images/testimonial/home-infotechno-main-slider-slide-01-image-02-587x572.webp" class="img-fluid" alt="">
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="swiper-slide">
-                                <div class="row align-items-center">
-                                    <div class="col-lg-6">
-                                        <div class="testimonials-contails-machine  tablet-mt__60 small-mt__60">
-                                            <h6>TESTIMONIALS</h6>
-                                            <p>Working with Horizon solutions was a great experience. Now, we have signed a long term contact for our e-commerce solutions. They have implemented Artificial Intelligence in the right way, we are getting more attractions from customers.</p>
-                                            <div class="testimonial-info">
-                                                <div class="testimonial-name">CEO</div>
-                                                <div class="testimonial-by-line">Leading E-commerce in Bangladesh</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="testimonials-image text-center mt-20">
-                                            <img src="{{ asset('frontend') }}/assets/images/testimonial/home-cybersecurity-contact-bg-image.webp" class="img-fluid" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                         <div class="swiper-pagination swiper-pagination-machine mt_20"></div>
                     </div>
@@ -590,7 +431,7 @@
                             <p class="sub-text">by 700+ customers for 3200+ clients</p>
                         </div>
 
-                        <div class="contact-list-item">
+                        <div class="contact-list-item" style="margin-top: -41px">
                             {{-- <a href="tel:190068668" class="single-contact-list">
                                 <div class="content-wrap">
                                     <div class="content">
@@ -604,7 +445,7 @@
                                     </div>
                                 </div>
                             </a> --}}
-                            <a href="mailto:hello@mitech.com" class="single-contact-list">
+                            <a href="info@horizonsolutions.tech" class="single-contact-list">
                                 <div class="content-wrap">
                                     <div class="content">
                                         <div class="icon">

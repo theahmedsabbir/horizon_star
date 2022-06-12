@@ -12,6 +12,7 @@ Route::get('cache', function () {
     \Artisan::call('cache:clear');
     \Artisan::call('config:clear');
     \Artisan::call('route:clear');
+    \Artisan::call('optimize');
     // session()->flush();
     dd("All clear!");
 });
@@ -63,5 +64,37 @@ Route::group(['prefix' => 'admin'], function(){
         //============ About ================//
         Route::get('/about/manage/{id}', 'Backend\AboutController@index');
         Route::post('/about/store', 'Backend\AboutController@store');
+
+        //============ Industry service ================//
+        Route::get('/industry/manage', 'Backend\IndustryController@index');
+        Route::get('/industry/create', 'Backend\IndustryController@create');
+        Route::post('/industry/store', 'Backend\IndustryController@store');
+        Route::get('/industry/edit/{id}', 'Backend\IndustryController@edit');
+        Route::post('/industry/update/{id}', 'Backend\IndustryController@update');
+        Route::get('/industry/delete/{id}', 'Backend\IndustryController@destroy');
+
+        //============ Testimonial ================//
+        Route::get('/testimonial/manage', 'Backend\TestimonialController@index');
+        Route::get('/testimonial/create', 'Backend\TestimonialController@create');
+        Route::post('/testimonial/store', 'Backend\TestimonialController@store');
+        Route::get('/testimonial/edit/{testimonial}', 'Backend\TestimonialController@edit');
+        Route::post('/testimonial/update/{testimonial}', 'Backend\TestimonialController@update');
+        Route::get('/testimonial/delete/{testimonial}', 'Backend\TestimonialController@destroy');
+
+        //============ Expert ================//
+        Route::get('/expert/manage', 'Backend\ExpertController@index');
+        Route::get('/expert/create', 'Backend\ExpertController@create');
+        Route::post('/expert/store', 'Backend\ExpertController@store');
+        Route::get('/expert/edit/{expert}', 'Backend\ExpertController@edit');
+        Route::post('/expert/update/{expert}', 'Backend\ExpertController@update');
+        Route::get('/expert/delete/{expert}', 'Backend\ExpertController@destroy');
+
+        //============ Solution ================//
+        Route::get('/solution/manage/{id}', 'Backend\SolutionController@index');
+        Route::post('/solution/store', 'Backend\SolutionController@store');
+
+        //============ Consulting ================//
+        Route::get('/consult/manage/{id}', 'Backend\SolutionController@consult_index');
+        Route::post('/consult/store', 'Backend\SolutionController@consult_store');
     });
 });

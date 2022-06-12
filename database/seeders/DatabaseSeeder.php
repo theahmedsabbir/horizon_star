@@ -29,5 +29,13 @@ class DatabaseSeeder extends Seeder
             'title' => 'Lorem Ipsum is simply dummy text of the printing',
             'description' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry'
         ]);
+        DB::table('solutions')->insert([
+            'title' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry'
+        ]);
+
+        DB::table('consults')->insert([
+            'title' => 'Lorem Ipsum is simply dummy text of the printing',
+            'description' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry'
+        ]);
     }
 }

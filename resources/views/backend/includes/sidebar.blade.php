@@ -84,6 +84,80 @@
               </ul>
           </li>
 
+          <li class="br-menu-item">
+              <a href="#" class="br-menu-link with-sub {{ Request::is('admin/admin*') ? 'show-sub' : ''}}">
+                  <i class="menu-item-icon icon ion-android-list tx-24"></i>
+                  {{-- <i class="menu-item-icon fa fa-star tx-16"></i> --}}
+                  <span class="menu-item-label">Industry Service</span>
+              </a><!-- br-menu-link -->
+              <ul class="br-menu-sub" style="{{ Request::is('admin/brand*') ? 'display: block;' : 'display: none;'}}">
+                  <li class="sub-item">
+                      <a href="{{ url('admin/industry/create') }}" class="sub-link {{ Request::is('admin/industry/create') ? 'active' : ''}}">Add</a>
+                  </li>
+                  <li class="sub-item">
+                      <a href="{{ url('admin/industry/manage') }}" class="sub-link {{ Request::is('admin/industry/manage') ? 'active' : ''}}">Manage</a>
+                  </li>
+              </ul>
+          </li>
+
+          <li class="br-menu-item">
+              <a href="#" class="br-menu-link with-sub {{ Request::is('admin/admin*') ? 'show-sub' : ''}}">
+                  <i class="menu-item-icon icon ion-android-list tx-24"></i>
+                  {{-- <i class="menu-item-icon fa fa-star tx-16"></i> --}}
+                  <span class="menu-item-label">Solution</span>
+              </a><!-- br-menu-link -->
+              <ul class="br-menu-sub" style="{{ Request::is('admin/brand*') ? 'display: block;' : 'display: none;'}}">
+                  <li class="sub-item">
+                      <a href="{{ url('admin/solution/manage/1') }}" class="sub-link {{ Request::is('admin/solution/manage/1') ? 'active' : ''}}">Manage</a>
+                  </li>
+              </ul>
+          </li>
+
+          <li class="br-menu-item">
+              <a href="#" class="br-menu-link with-sub {{ Request::is('admin/admin*') ? 'show-sub' : ''}}">
+                  <i class="menu-item-icon icon ion-android-list tx-24"></i>
+                  {{-- <i class="menu-item-icon fa fa-star tx-16"></i> --}}
+                  <span class="menu-item-label">Consult</span>
+              </a><!-- br-menu-link -->
+              <ul class="br-menu-sub" style="{{ Request::is('admin/brand*') ? 'display: block;' : 'display: none;'}}">
+                  <li class="sub-item">
+                      <a href="{{ url('admin/consult/manage/1') }}" class="sub-link {{ Request::is('admin/consult/manage/1') ? 'active' : ''}}">Manage</a>
+                  </li>
+              </ul>
+          </li>
+
+          <li class="br-menu-item">
+              <a href="#" class="br-menu-link with-sub {{ Request::is('admin/admin*') ? 'show-sub' : ''}}">
+                  <i class="menu-item-icon icon ion-android-list tx-24"></i>
+                  {{-- <i class="menu-item-icon fa fa-star tx-16"></i> --}}
+                  <span class="menu-item-label">Experts</span>
+              </a><!-- br-menu-link -->
+              <ul class="br-menu-sub" style="{{ Request::is('admin/brand*') ? 'display: block;' : 'display: none;'}}">
+                  <li class="sub-item">
+                      <a href="{{ url('admin/expert/create') }}" class="sub-link {{ Request::is('admin/expert/create') ? 'active' : ''}}">Add</a>
+                  </li>
+                  <li class="sub-item">
+                      <a href="{{ url('admin/expert/manage') }}" class="sub-link {{ Request::is('admin/expert/manage') ? 'active' : ''}}">Manage</a>
+                  </li>
+              </ul>
+          </li>
+
+          <li class="br-menu-item">
+              <a href="#" class="br-menu-link with-sub {{ Request::is('admin/admin*') ? 'show-sub' : ''}}">
+                  <i class="menu-item-icon icon ion-android-list tx-24"></i>
+                  {{-- <i class="menu-item-icon fa fa-star tx-16"></i> --}}
+                  <span class="menu-item-label">Testimonial</span>
+              </a><!-- br-menu-link -->
+              <ul class="br-menu-sub" style="{{ Request::is('admin/brand*') ? 'display: block;' : 'display: none;'}}">
+                  <li class="sub-item">
+                      <a href="{{ url('admin/testimonial/create') }}" class="sub-link {{ Request::is('admin/testimonial/create') ? 'active' : ''}}">Add</a>
+                  </li>
+                  <li class="sub-item">
+                      <a href="{{ url('admin/testimonial/manage') }}" class="sub-link {{ Request::is('admin/testimonial/manage') ? 'active' : ''}}">Manage</a>
+                  </li>
+              </ul>
+          </li>
+
       </ul><!-- br-sideleft-menu -->
       <br>
     </div><!-- br-sideleft -->

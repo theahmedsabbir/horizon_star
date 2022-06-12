@@ -43,6 +43,23 @@
                         <div class="text-danger">{{ $errors->first('description') }}</div>
                     @endif
                 </div>
+                <div class="form-group">
+                    <label for="">Image Content</label>
+                    <input type="text" name="image_content" class="form-control" value="{{ $aboutUpdate->image_content ? $aboutUpdate->image_content : old('image_content') }}">
+                    @if ($errors->has('image_content'))
+                        <div class="text-danger">{{ $errors->first('image_content') }}</div>
+                    @endif
+                </div>
+                <div class="form-group">
+                    <label for="">Image</label>
+                    <input type="file" name="image" class="form-control"/>
+                    @if(!empty($aboutUpdate->image))
+                        <img src="{{ asset('/assets/about/'.$aboutUpdate->image) }}" />
+                    @endif
+                    @if ($errors->has('image'))
+                        <div class="text-danger">{{ $errors->first('image') }}</div>
+                    @endif
+                </div>
       			<div class="form-group">
       				<button type="submit" class="btn btn-teal mt-3">Submit</button>
       			</div>

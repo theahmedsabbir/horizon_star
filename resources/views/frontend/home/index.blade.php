@@ -4,8 +4,6 @@
     Home
 @endsection
 
-@push('style')
-
 <div class="site-wrapper-reveal">
     <!--============ Machine learning Hero Start ============-->
     <div class="machine-learning-hero machine-learning-hero-bg">
@@ -603,8 +601,6 @@
     </div> --}}
     <!--====================  End of brand logo slider area  ====================-->
 </div>
-
-@endpush
 
 @section('content')
 

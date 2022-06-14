@@ -21,6 +21,12 @@ Route::get('cache', function () {
 
 Route::get('/', [FrontendController::class, 'index'])->name('root');
 Route::post('/contact-us', [FrontendController::class, 'contactUs']);
+Route::get('/service/{id}/{slug}', [FrontendController::class, 'service']);
+Route::get('/technologies/{id}/{slug}', [FrontendController::class, 'technologies']);
+Route::get('/careers/{id}/{slug}', [FrontendController::class, 'careers']);
+Route::get('/mission/vision', [FrontendController::class, 'mission_vision']);
+Route::get('/about', [FrontendController::class, 'about']);
+Route::get('/contact', [FrontendController::class, 'contact']);
 
 Auth::routes();
 

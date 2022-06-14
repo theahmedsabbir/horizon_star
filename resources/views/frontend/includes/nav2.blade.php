@@ -1,5 +1,5 @@
 
-    <div class="header-area header-area--absolute">
+    <div class="header-area header-area--absolute" style="background-color: #0a53be">
         <div class="header-bottom-wrap header-sticky">
             <div class="container">
                 <div class="row">
@@ -54,11 +54,11 @@
                                                 <!-- multilevel submenu -->
                                             </li>
                                             <li class="">
-                                                <a href="#about"><span>About us</span></a>
+                                                <a href="{{ url('/about') }}"><span>About us</span></a>
                                                 <!-- multilevel submenu -->
                                             </li>
                                             <li class="">
-                                                <a href="#contact"><span>Contact us</span></a>
+                                                <a href="{{ url('/contact') }}"><span>Contact us</span></a>
                                                 <!-- multilevel submenu -->
                                             </li>
                                         </ul>

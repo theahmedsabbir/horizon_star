@@ -11,7 +11,7 @@
                                 {{-- <li class="text-white">58 Howard Street #2 San Francisco, CA 941</li> --}}
                                 <li><a href="#" class="hover-style-link text-white">contact@horizonsolution.tech</a></li>
                                 {{-- <li><a href="tel:123344556" class="hover-style-link text-white font-weight--bold">(+68)1221 09876</a></li> --}}
-                                <li><a href="#" class="hover-style-link text-white">www.horizonsolution.tech</a></li>
+                                <li><a href="#" class="hover-style-link text-white">www.horizonsolutions.tech</a></li>
                             </ul>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6 footer-widget">
@@ -34,10 +34,8 @@
                             </ul>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6 footer-widget">
-                            <h6 class="footer-widget__title mb-20">Support</h6>
+                            <h6 class="footer-widget__title text-white mb-20">Support</h6>
                             <ul class="footer-widget__list">
-                                {{-- <li><a href="#" class="hover-style-link text-white">Forum Support</a></li> --}}
-                                {{-- <li><a href="#" class="hover-style-link text-white">Help & FAQ</a></li> --}}
                                 <li><a href="#" class="hover-style-link text-white">Contact Us</a></li>
                                 <li><a href="#" class="hover-style-link text-white">Pricing and plans</a></li>
                                 <li><a href="#" class="hover-style-link text-white">Cookies Policy</a></li>
@@ -53,7 +51,7 @@
                     </div>
                 </div>
             </div>
-            <div class="footer-copyright-area section-space--pb_30">
+            <div class="footer-copyright-area section-space--pb_30 bg-dark">
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-md-6 text-center text-md-start">

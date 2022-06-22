@@ -27,6 +27,9 @@ Route::get('/careers/{id}/{slug}', [FrontendController::class, 'careers']);
 Route::get('/mission/vision', [FrontendController::class, 'mission_vision']);
 Route::get('/about', [FrontendController::class, 'about']);
 Route::get('/contact', [FrontendController::class, 'contact']);
+Route::get('/terms/condition', [FrontendController::class, 'terms_condition']);
+Route::get('/privacy/policy', [FrontendController::class, 'privacy_policy']);
+Route::get('/gdpr', [FrontendController::class, 'gdpr']);
 
 Auth::routes();
 

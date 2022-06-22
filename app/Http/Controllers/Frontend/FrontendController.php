@@ -100,4 +100,19 @@ class FrontendController extends Controller
 
         return redirect()->back()->with('success', 'Thank you for your contact');
     }
+
+    public function terms_condition()
+    {
+        return view('frontend.conditions.conditions');
+    }
+
+    public function privacy_policy()
+    {
+        return view('frontend.privacy.privacy');
+    }
+
+    public function gdpr()
+    {
+        return view('frontend.gdpr.gdpr');
+    }
 }

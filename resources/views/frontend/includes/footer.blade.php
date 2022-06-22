@@ -28,17 +28,14 @@
                             <h6 class="footer-widget__title text-white mb-20">Quick links</h6>
                             <ul class="footer-widget__list">
                                 {{-- <li><a href="#" class="hover-style-link text-white">Pick up locations</a></li> --}}
-                                <li><a href="#" class="hover-style-link text-white">Terms of Payment</a></li>
-                                <li><a href="#" class="hover-style-link text-white">Privacy Policy</a></li>
-                                <li><a href="#" class="hover-style-link text-white">Where to Find Us</a></li>
+                                <li><a href="{{ url('/terms/condition') }}" class="hover-style-link text-white">Terms of Conditions</a></li>
+                                <li><a href="{{ url('/privacy/policy') }}" class="hover-style-link text-white">Privacy Policy</a></li>
                             </ul>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6 footer-widget">
                             <h6 class="footer-widget__title text-white mb-20">Support</h6>
                             <ul class="footer-widget__list">
-                                <li><a href="#" class="hover-style-link text-white">Contact Us</a></li>
-                                <li><a href="#" class="hover-style-link text-white">Pricing and plans</a></li>
-                                <li><a href="#" class="hover-style-link text-white">Cookies Policy</a></li>
+                                <li><a href="{{ url('/gdpr') }}" class="hover-style-link text-white">GDPR</a></li>
                             </ul>
                         </div>
                         {{-- <div class="col-lg-2 col-md-4 col-sm-6 footer-widget">

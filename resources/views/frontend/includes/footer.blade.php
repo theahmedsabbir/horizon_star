@@ -30,12 +30,26 @@
                                 {{-- <li><a href="#" class="hover-style-link text-white">Pick up locations</a></li> --}}
                                 <li><a href="{{ url('/terms/condition') }}" class="hover-style-link text-white">Terms of Conditions</a></li>
                                 <li><a href="{{ url('/privacy/policy') }}" class="hover-style-link text-white">Privacy Policy</a></li>
+                                <li><a href="{{ url('/gdpr') }}" class="hover-style-link text-white">GDPR</a></li>
                             </ul>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6 footer-widget">
-                            <h6 class="footer-widget__title text-white mb-20">Support</h6>
-                            <ul class="footer-widget__list">
-                                <li><a href="{{ url('/gdpr') }}" class="hover-style-link text-white">GDPR</a></li>
+                            <ul class="list ht-social-networks solid-rounded-icon">
+                                <li class="item">
+                                    <a href="https://twitter.com/HorizonStarBD" target="_blank" aria-label="Twitter" class="social-link hint--bounce hint--top hint--primary">
+                                        <i class="fab fa-twitter text-white link-icon" style="margin-top: 9px;"></i>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="https://www.facebook.com/14632661267278" target="_blank" aria-label="Facebook" class="social-link hint--bounce hint--top hint--primary">
+                                        <i class="fab fa-facebook-f text-white link-icon" style="margin-top: 9px;"></i>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="https://www.linkedin.com/company/horizon-rising-star/" target="_blank" aria-label="Linkedin" class="social-link hint--bounce hint--top hint--primary">
+                                        <i class="fab fa-linkedin text-white link-icon" style="margin-top: 9px;"></i>
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                         {{-- <div class="col-lg-2 col-md-4 col-sm-6 footer-widget">
@@ -51,34 +65,11 @@
             <div class="footer-copyright-area section-space--pb_30 bg-dark">
                 <div class="container">
                     <div class="row align-items-center">
-                        <div class="col-md-6 text-center text-md-start">
-                            <span class="copyright-text text-white">&copy; 2022 Horizon. <a href="{{ url('/') }}">All Rights Reserved.</a></span>
+                        <div class="col-md-4 text-center text-md-start"></div>
+                        <div class="col-md-4 text-center text-md-end">
+                            <p class="copyright-text text-white" style="margin-top: 26px;">&copy; 2022 Horizon All Rights Reserved</p>
                         </div>
-                        <div class="col-md-6 text-center text-md-end">
-                            <ul class="list ht-social-networks solid-rounded-icon">
-
-                                <li class="item">
-                                    <a href="https://twitter.com/HorizonStarBD" target="_blank" aria-label="Twitter" class="social-link hint--bounce hint--top hint--primary">
-                                        <i class="fab fa-twitter text-white link-icon"></i>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="https://www.facebook.com/14632661267278" target="_blank" aria-label="Facebook" class="social-link hint--bounce hint--top hint--primary">
-                                        <i class="fab fa-facebook-f text-white link-icon"></i>
-                                    </a>
-                                </li>
-                                {{-- <li class="item">
-                                    <a href="https://instagram.com/" target="_blank" aria-label="Instagram" class="social-link hint--bounce hint--top hint--primary">
-                                        <i class="fab fa-instagram text-white link-icon"></i>
-                                    </a>
-                                </li> --}}
-                                <li class="item">
-                                    <a href="https://www.linkedin.com/company/horizon-rising-star/" target="_blank" aria-label="Linkedin" class="social-link hint--bounce hint--top hint--primary">
-                                        <i class="fab fa-linkedin text-white link-icon"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+                        <div class="col-md-4 text-center text-md-end"></div>
                     </div>
                 </div>
             </div>

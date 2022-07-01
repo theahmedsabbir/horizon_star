@@ -19,7 +19,7 @@
         </div>
     </div>
     <!--====================  header area ====================-->
-    
+
     @include('frontend.includes.nav')
     <!--====================  End of header area  ====================-->
     <div id="main-wrapper">
@@ -35,10 +35,10 @@
     </a>
     <!--====================  End of scroll top  ====================-->
     <!-- Start Toolbar -->
-    
+
     @include('frontend.includes.others')
 
-    
+
     @include('frontend.includes.script')
     @stack('script')
 </body>

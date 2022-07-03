@@ -17,15 +17,13 @@
 <!-- Plugins CSS File -->
 <link rel="stylesheet" href="{{ asset('/frontend/') }}/assets/css/bootstrap.min.css">
 
-<!-- Main CSS File -->
-
-<link rel="stylesheet" type="text/css" href="{{ asset('/frontend/') }}/assets/css/style.min.css">
-<link rel="stylesheet" href="{{ asset('/frontend/') }}/assets/css/demo1.min.css">
-
-
 <link rel="stylesheet" type="text/css" href="{{ asset('/frontend/') }}/assets/vendor/fontawesome-free/css/all.min.css">
 <link rel="stylesheet" type="text/css" href="{{ asset('/frontend/') }}/assets/vendor/simple-line-icons/css/simple-line-icons.min.css">
 
 {{-- toastr --}}
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- Main CSS File -->
+
+<link rel="stylesheet" type="text/css" href="{{ asset('/frontend/') }}/assets/css/style.min.css">
+<link rel="stylesheet" href="{{ asset('/frontend/') }}/assets/css/demo1.min.css">
 

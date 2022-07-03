@@ -14,7 +14,10 @@ use App\Models\Service;
 use App\Models\Solution;
 use App\Models\Technology;
 use App\Models\Testimonial;
+use App\Notifications\EmailNotification;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Notification;
+use Mail;
 // use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Session;
 
@@ -93,7 +96,15 @@ class FrontendController extends Controller
             $contact->name = $request->name;
             $contact->email = $request->email;
             $contact->message = $request->message;
-            $contact->save();
+            if($contact->save()){
+                $email = 'shahariar.ikbal86@gmail.com';
+                Mail::send('frontend.emails.contact-form',  ['name' => $request->name, 'email' => $request->email, 'mage' => $request->message], function ($msg) use ($email, $request)
+                {
+                    $msg->from('info@horizonsolutions.tech', 'Portfolio');
+                    $msg->subject('Send Form My portfolio');
+                    $msg->to($email);
+                });
+            }
         }catch (\Exception $exception){
             return redirect()->back()->with('error', $exception->getMessage());
         }

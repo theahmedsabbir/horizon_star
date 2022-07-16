@@ -86,30 +86,42 @@ class FrontendController extends Controller
 
     public function contactUs(Request $request)
     {
-        $this->validate($request, [
-            'name' => 'required',
-            'email' => 'required',
-            'message' => 'required',
-        ]);
-        try {
-            $contact = new Contact();
-            $contact->name = $request->name;
-            $contact->email = $request->email;
-            $contact->message = $request->message;
-            if($contact->save()){
-                $email = 'shahariar.ikbal86@gmail.com';
-                Mail::send('frontend.emails.contact-form',  ['name' => $request->name, 'email' => $request->email, 'mage' => $request->message], function ($msg) use ($email, $request)
-                {
-                    $msg->from('info@horizonsolutions.tech', 'Portfolio');
-                    $msg->subject('Send Form My portfolio');
-                    $msg->to($email);
-                });
-            }
-        }catch (\Exception $exception){
-            return redirect()->back()->with('error', $exception->getMessage());
-        }
-
+        //dd($request->all());
+        $contact = new Contact();
+        $contact->name = $request->name;
+        $contact->email = $request->email;
+        $contact->message = $request->message;
+        $email = 'info@horizonsolutions.tech';
+        Mail::send('frontend.emails.contact-form',  ['name' => $request->name, 'email' => $request->email, 'mage' => $request->message], function ($msg) use ($email, $request)
+        {
+            $msg->from('info@horizonsolutions.tech', 'Portfolio');
+            $msg->subject('Send Form My portfolio');
+            $msg->to($email);
+        });
+        $contact->save();
         return redirect()->back()->with('success', 'Thank you for your contact');
+//        $this->validate($request, [
+//            'name' => 'required',
+//            'email' => 'required',
+//            'message' => 'required',
+//        ]);
+//        try {
+//            $contact = new Contact();
+//            $contact->name = $request->name;
+//            $contact->email = $request->email;
+//            $contact->message = $request->message;
+//            $email = 'info@horizonsolutions.tech';
+//             Mail::send('frontend.emails.contact-form',  ['name' => $request->name, 'email' => $request->email, 'mage' => $request->message], function ($msg) use ($email, $request)
+//            {
+//                $msg->from('info@horizonsolutions.tech', 'Portfolio');
+//                $msg->subject('Send Form My portfolio');
+//                $msg->to($email);
+//            });
+//            $contact->save();
+//            return redirect()->back()->with('success', 'Thank you for your contact');
+//        }catch (\Exception $exception){
+//            return redirect()->back()->with('error', $exception->getMessage());
+//        }
     }
 
     public function terms_condition()

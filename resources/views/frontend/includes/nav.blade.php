@@ -54,6 +54,10 @@
                                                 <!-- multilevel submenu -->
                                             </li>
                                             <li class="">
+                                                <a href="{{ url('/portfolio') }}"><span>Portfolio</span></a>
+                                                <!-- multilevel submenu -->
+                                            </li>
+                                            <li class="">
                                                 <a href="#about"><span>About us</span></a>
                                                 <!-- multilevel submenu -->
                                             </li>

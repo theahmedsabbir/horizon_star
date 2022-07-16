@@ -3678,7 +3678,7 @@ input[type="checkbox"] {
 }
 
 .menu-style-three .navigation-menu > ul > li, .menu-style-four .navigation-menu > ul > li {
-  padding-left: 24px;
+  padding-left: 14px;
   padding-right: 24px;
   margin: 0;
 }

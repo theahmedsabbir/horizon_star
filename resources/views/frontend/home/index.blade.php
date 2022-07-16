@@ -4,6 +4,7 @@
     Home
 @endsection
 
+@section('content')
 <div class="site-wrapper-reveal">
     <!--============ Machine learning Hero Start ============-->
     <div class="machine-learning-hero machine-learning-hero-bg">
@@ -103,7 +104,7 @@
                             <a href="" class="video-link  mt-30">
                                 <div class="single-popup-wrap">
                                     <img class="img-fluid border-radus-5" src="{{ asset('/assets/about/'.$data['about']->image) }}" alt="">
-                                    <div class="ht-popup-video video-button">
+                                    {{-- <div class="ht-popup-video video-button">
                                         <div class="video-mark">
                                             <div class="wave-pulse wave-pulse-1"></div>
                                             <div class="wave-pulse wave-pulse-2"></div>
@@ -113,7 +114,7 @@
                                                 <span class="video-play-icon"></span>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </a>
                         </div>
@@ -601,9 +602,6 @@
     </div> --}}
     <!--====================  End of brand logo slider area  ====================-->
 </div>
-
-@section('content')
-
 @endsection
 
 @push('script')

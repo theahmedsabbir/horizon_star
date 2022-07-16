@@ -100,7 +100,10 @@
                             </ul>
                         </li>
                         <li class="has-children">
-                            <a href="#">Mission & Vision</a>
+                            <a href="{{ url('/mission/vision') }}">Mission & Vision</a>
+                        </li>
+                        <li class="has-children">
+                            <a href="{{ url('/portfolio') }}">Portfolio</a>
                         </li>
                         <li class="has-children">
                             <a href="#about">About Us</a>
